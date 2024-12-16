@@ -35,7 +35,7 @@ app.get('/', async (req, res) => {
 
         // Resposta com os registros
         const namesList = rows.map(row => `<li>${row.name}</li>`).join('');
-        res.send(`<h1>Full Cycle Rocks!</h1>`);
+        res.send(`<h1>Full Cycle Rocks!</h1><ul>${namesList}</ul>`);
     } catch (error) {
         console.error('Erro ao acessar o banco de dados:', error);
         res.status(500).send('Erro interno do servidor');
