@@ -2,7 +2,7 @@ FROM node:16-alpine AS production
 
 WORKDIR /usr/src/app
 
-COPY package.json package-lock.json ./
+COPY /node-app/package.json /node-app/package-lock.json ./
 
 RUN npm install --only=production
 
